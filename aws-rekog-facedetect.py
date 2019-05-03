@@ -5,7 +5,7 @@ if __name__ == "__main__":
     # Change bucket to your S3 bucket that contains the image file.
     # Change photo to your image file.
     photo='moviestar.jpg'
-    bucket='jit2600'
+    bucket='prasrekog'
     client=boto3.client('rekognition')
 
     response = client.detect_faces(Image={'S3Object':{'Bucket':bucket,'Name':photo}},Attributes=['ALL'])
